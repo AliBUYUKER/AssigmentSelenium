@@ -24,7 +24,7 @@ public class _01 extends BaseDriver {
         Assert.assertTrue("Hatalı sonuç", resultName.getText().contains("Automation"));
         WebElement resultEmail = driver.findElement(By.cssSelector("div[class='border col-md-12 col-sm-12']>[id='email']"));
         Assert.assertTrue("Hatalı sonuç", resultEmail.getText().contains("Testing"));
-        driverBekleKapat();
+        //driverBekleKapat();
     }
 
     @Test
@@ -38,7 +38,7 @@ public class _01 extends BaseDriver {
         submit.click();
         WebElement result = driver.findElement(By.cssSelector("[id='time']"));
         Assert.assertTrue("Hatalı sonuç", result.getText().equals("Your nearest branch closes in: 30m 5s"));
-        driverBekleKapat();
+       // driverBekleKapat();
     }
 
     @Test
@@ -50,7 +50,7 @@ public class _01 extends BaseDriver {
         searchClick.click();
         WebElement result = driver.findElement(By.cssSelector("[class='search-result-txt-section  marT12']"));
         Assert.assertTrue("Hatalı sonuç", result.getText().contains("results for teddy bear"));
-        driverBekleKapat();
+       // driverBekleKapat();
     }
 
     @Test
@@ -66,7 +66,7 @@ public class _01 extends BaseDriver {
         cal.click();
         WebElement answer = driver.findElement(By.cssSelector("[id='answer']"));
         Assert.assertTrue("Hatalı Sonuç", answer.getText().equals("10"));
-        driverBekleKapat();
+        //driverBekleKapat();
     }
 
     @Test
@@ -78,7 +78,7 @@ public class _01 extends BaseDriver {
         fake.click();
         WebElement ok = driver.findElement(By.cssSelector("[id='dialog-ok']"));
         ok.click();
-        driverBekleKapat();
+        //driverBekleKapat();
     }
 
     @Test
@@ -90,6 +90,6 @@ public class _01 extends BaseDriver {
         showModal.click();
         WebElement ok = driver.findElement(By.cssSelector("[id='dialog-ok']"));
         ok.click();
-        driverBekleKapat();
+       driverBekleKapat();
     }
 }

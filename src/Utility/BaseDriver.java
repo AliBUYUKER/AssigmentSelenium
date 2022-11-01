@@ -38,7 +38,7 @@ public class BaseDriver {
     public static void driverBekleKapat()
     {
         MyFunc.Bekle(5);
-        driver.quit();
+        driver.close();
     }
     public static void KalanOncekileriKapat() {
 
