@@ -66,11 +66,12 @@ public class _01 extends BaseDriver {
                 WebElement c = driver.findElement(By.xpath("//div[@id='" + countysBoxs.get(j) + "']//following-sibling::div"));
                 Action aksiyon = actions.clickAndHold(cityss).build();
                 aksiyon.perform();
-                Thread.sleep(150);
+                Thread.sleep(120);
                 aksiyon = actions.moveToElement(c).release().build();
                 aksiyon.perform();
-                WebElement boxsColor = driver.findElement(By.xpath("//div[@id='" + citysBoxs.get(i) + "']"));
-                if (boxsColor.getCssValue("background").contains("rgb(0, 128, 0)")) {
+                //WebElement boxsColor = driver.findElement(By.xpath("//div[@id='" + citysBoxs.get(i) + "']"));
+                if (cityss.getCssValue("background").contains("rgb(0, 128, 0)")) {
+                    countysBoxs.remove(j);
                     break;
                 }
             }
@@ -139,15 +140,15 @@ public class _01 extends BaseDriver {
                 WebElement countryys = driver.findElement(By.id(countysBoxs.get(j)));
                 Action aksiyon = actions.clickAndHold(cityss).build();
                 aksiyon.perform();
-                Thread.sleep(150);
+                Thread.sleep(120);
                 aksiyon = actions.moveToElement(countryys).release().build();
                 aksiyon.perform();
-                WebElement boxsColor = driver.findElement(By.id(citysBoxs.get(i)));
-                if (boxsColor.getCssValue("background").contains("rgb(0, 128, 0)")) {
+                /*WebElement boxsColor = driver.findElement(By.id(citysBoxs.get(i)));*/
+                if (cityss.getCssValue("background").contains("rgb(0, 128, 0)")) {
                     break;
                 }
             }
-        }
+        }driver.switchTo().alert().accept();
          driverBekleKapat();
     }
 }
